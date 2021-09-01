@@ -10,14 +10,21 @@ public class EmployeeMain {
 	public static final int MAX_HRS_IN_MONTH=100;
 
 	//variables
-	int Emp_Hrs = 0;
-	int Emp_Wage = 0;
-	int Total_Wage = 0;
-	int TotalEmpHrs=0;
-	int TotalWorkingDays=0;
+	int Emp_Hrs;
+	int Emp_Wage;
+	int Total_Wage;
+	int TotalEmpHrs;
+	int TotalWorkingDays;
+
+	EmployeeMain() {
+		TotalEmpHrs = 0;
+		Total_Wage = 0;
+		TotalWorkingDays = 0;
+	}
 
 	//method to calculate wage
 	public void getWage() {
+		Emp_Wage = 0;
 		Emp_Wage=Emp_Hrs*EMP_RATE_PER_HOUR ;
 		Total_Wage+=Emp_Wage;
 		TotalWorkingDays+=1;
