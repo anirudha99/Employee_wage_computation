@@ -11,6 +11,13 @@ public class EmployeeMain {
 	public final String company;
 
 
+	/**
+	 * @param company
+	 * @param EMP_RATE_PER_HOUR
+	 * @param NUM_WORKING_DAYS
+	 * @param MAX_HRS_IN_MONTH
+	 * Parameterised constructor
+	 */
 	public EmployeeMain(String company,int EMP_RATE_PER_HOUR,int NUM_WORKING_DAYS,int MAX_HRS_IN_MONTH)
 	{
 		this.company=company;
@@ -30,9 +37,9 @@ public class EmployeeMain {
 		int TotalWorkingDays = 0;
 
 		while(TotalEmpHrs<MAX_HRS_IN_MONTH && TotalWorkingDays<NUM_WORKING_DAYS) {
-			int empCheck=(int) (Math.floor(Math.random()*10)%3);
+			int empCheck=(int) (Math.floor(Math.random()*10)%3); //random number for attendance
 			TotalWorkingDays+=1;
-			switch (empCheck)
+			switch (empCheck) //To check if full time or part time worker
 			{
 			case  IS_FULL_TIME:
 				Emp_Hrs=16;
@@ -42,7 +49,7 @@ public class EmployeeMain {
 				break;
 			default: Emp_Hrs=0;
 			}
-			TotalEmpHrs+=Emp_Hrs;
+			TotalEmpHrs+=Emp_Hrs; //calculation
 			Emp_Wage = Emp_Hrs*EMP_RATE_PER_HOUR ;
 			Total_Wage+=Emp_Wage;
 			System.out.println("Employee wage of the company - "+company+  " is :"+ Emp_Wage);
@@ -56,11 +63,11 @@ public class EmployeeMain {
 
 		System.out.println("Welcome to Employee wage Computation program");
 
-		EmployeeMain employee1 = new EmployeeMain("More",20,20,100);
-		EmployeeMain employee2 = new EmployeeMain("BigBazaar",22,20,105);
-		EmployeeMain employee3 = new EmployeeMain("DMart",25,22,100);
-		employee1.wageAttendance();
-		employee2.wageAttendance();
-		employee3.wageAttendance();
+		EmployeeMain more = new EmployeeMain("More",20,20,100); //multiple object creation for different companies
+		EmployeeMain bigbazaar = new EmployeeMain("BigBazaar",22,20,105);
+		EmployeeMain dmart = new EmployeeMain("DMart",25,22,100);
+		more.wageAttendance();
+		bigbazaar.wageAttendance();
+		dmart.wageAttendance();
 	}
 }
