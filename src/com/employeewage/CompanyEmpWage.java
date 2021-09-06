@@ -24,7 +24,7 @@ public class CompanyEmpWage {
 	
 	@Override
 	public String toString() {
-		return "CompanyEmpWage [company = " + company + ", Total_Wage = " + Total_Wage + "]";
+		return "CompanyEmpWage [Company = " + company + ", TotalWage = " + Total_Wage + "]";
 	}
 
 	/**
