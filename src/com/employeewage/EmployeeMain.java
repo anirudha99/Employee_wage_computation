@@ -5,7 +5,7 @@ package com.employeewage;
  * with wager per hour for that company
  *
  */
-public class EmployeeMain {
+public class EmployeeMain implements ComputeEmpWage {
 
 	// Constants
 	public static final int IS_PART_TIME = 1;
@@ -26,7 +26,7 @@ public class EmployeeMain {
 	 * @param numWorkingDays
 	 * To add company
 	 */
-	private void addCompanyEmpWage(String company, int empWagePerHour, int maxHoursPerMonth, int numWorkingDays) {
+	public void addCompanyEmpWage(String company, int empWagePerHour, int maxHoursPerMonth, int numWorkingDays) {
 		companyempwage[numOfCompany] = new CompanyEmpWage(company, empWagePerHour, maxHoursPerMonth, numWorkingDays);
 		numOfCompany += 1;
 	}
