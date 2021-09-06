@@ -5,6 +5,23 @@ public class CompanyEmpWage {
 	public final int numWorkingDays;
 	public final int maxHoursInMonth;
 	public final String company;
+	public int dailyWage;
+	
+	
+	/**
+	 * @return daily wage
+	 */
+	public int getDailyWage() {
+		return dailyWage;
+	}
+
+	/**
+	 * @param dailyWage
+	 */
+	public void setDailyWage(int dailyWage) {
+		this.dailyWage = dailyWage;
+	}
+
 	public int Total_Wage;
 	
 	/**

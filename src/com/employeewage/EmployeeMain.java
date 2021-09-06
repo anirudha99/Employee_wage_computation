@@ -56,7 +56,10 @@ public class EmployeeMain implements ComputeEmpWage {
 				default: empHours = 0;
 				}
 				totalEmpHours += empHours; //calculation
-				System.out.println("Day::" + totalWorkingDays + " Emp hour - " + empHours);
+				
+				int dailywage = empHours * company.empWagePerHour;
+				company.setDailyWage(dailywage);
+				System.out.println("Day::" + totalWorkingDays + " Emp hour " + empHours+" Daily wage is "+company.getDailyWage());
 
 			}
 			company.setTotal_Wage(totalEmpHours * company.empWagePerHour);
