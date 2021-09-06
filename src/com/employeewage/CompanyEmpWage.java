@@ -1,6 +1,8 @@
 package com.employeewage;
 
 public class CompanyEmpWage {
+	
+	//class members
 	public final int empWagePerHour;
 	public final int numWorkingDays;
 	public final int maxHoursInMonth;
@@ -35,13 +37,13 @@ public class CompanyEmpWage {
 	 * @param total_Wage
 	 */
 	public void setTotal_Wage(int total_Wage) {
-		Total_Wage = total_Wage;
+		this.Total_Wage = total_Wage;
 	}
 
 	
 	@Override
 	public String toString() {
-		return "CompanyEmpWage [Company = " + company + ", TotalWage = " + Total_Wage + "]";
+		return "Company Employee Wage -> Company = " + company + " | TotalWage = " + Total_Wage + " ";
 	}
 
 	/**
